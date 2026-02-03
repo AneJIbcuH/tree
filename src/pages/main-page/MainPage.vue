@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { TreeStore } from '@/shared/classes';
 import type { TreeObject } from '@/types/types';
-import { AgGridVue } from 'ag-grid-vue3';
-import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community';
 import { TreeView } from '@/entities';
 
-ModuleRegistry.registerModules([AllCommunityModule]);
 const data: TreeObject[] = [
   {
     id: 1,

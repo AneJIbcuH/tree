@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
 import { AgGridVue } from 'ag-grid-vue3';
-import type { CellStyle, ColDef } from 'ag-grid-community';
-import { ModuleRegistry } from 'ag-grid-community';
-import type { TreeObject } from '@/types/types';
+import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community';
 import { TreeDataModule } from 'ag-grid-enterprise';
+import type { CellStyle, ColDef } from 'ag-grid-community';
+import type { TreeObject } from '@/types/types';
 
-ModuleRegistry.registerModules([TreeDataModule]);
+ModuleRegistry.registerModules([TreeDataModule, AllCommunityModule]);
 
 const { items } = defineProps<{
   items: TreeObject[];
